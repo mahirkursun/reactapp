@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+//import User from "./components/User"
 import './App.css';
+import Navbar from './components/Navbar';
+import User from './components/User';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">      
+        <Navbar title ="User App"/>
+        <hr/>
+        <User 
+        name="Mustafa Murat Coşkun"
+        salary ="5000"
+        department="Bilişim"
+        />
+        <User 
+        name="Oğuz Artıran"
+        salary ="6000"
+        department="Bilişim"
+        />
     </div>
   );
 }
