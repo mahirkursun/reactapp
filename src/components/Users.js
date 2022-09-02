@@ -1,26 +1,46 @@
 import React, { Component } from 'react'
 import User from "./User"
+import UserConsumer from '../context'
 
  class Users extends Component {
   render() {
-    const {users}=this.props;
-    console.log(users);
-    return (
-      <div>
+    
+    return(
+      <UserConsumer>
         {
-            users.map(user=>{
-                return(
-                    <User
-                        key={user.id}
-                        name={user.name}
-                        salary={user.salary}
-                        department ={user.department}
-                    />
-                )
-            })
+          value => {
+            const {users} = value;
+            return (
+              <div>
+                {
+                    users.map(user=>{
+                        return(
+                            <User
+                                key={user.id}
+                                id ={user.id}
+                                name={user.name}
+                                salary={user.salary}
+                                department ={user.department}
+                          
+                            />
+                        )
+                    })
+                }
+              </div>
+            )
+          }
         }
-      </div>
+
+      </UserConsumer>
     )
+
+
+
+
+
+
+    
   }
 }
+
 export default Users;
