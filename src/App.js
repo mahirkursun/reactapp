@@ -2,23 +2,42 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import Users from './components/Users';
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import AddUser from './components/AddUser';
-import Test from './components/Test';
+
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+// const Home = () => {
+//   return (
+//     <h3>Home Page</h3>
+//   )
+// }
+// const About = () => {
+//   return (
+//     <h3>About Page</h3>
+//   )
+// }
 
 class App extends Component {
-  
+    
+    
   render() {
     return (
-      <div className="container">      
-        <Test test = "deneme"/>
+      
+        
+      <Router>
+     
+        <div className="container">     
           <Navbar title ="User App"/>
           <hr/>
-          <AddUser/>
+          
+            <Route exact path = "/"><Users /></Route>
+            <Route exact path = "/add"><AddUser /></Route>
 
-
-          <Users />
-      </div>
+        
+            
+        </div>
+      </Router>
     );
   }
 }
