@@ -7,10 +7,10 @@
       "department": "Bilişim"
     },
     {
-      "id": "unique-2",
       "name": "Kemalettin Taslak",
       "salary": "4000",
-      "department": "Pazarlama"
+      "department": "Pazarlama 2",
+      "id": "unique-2"
     },
     {
       "name": "Mahir Kurşun",
@@ -26,8 +26,8 @@
     },
     {
       "name": "Mehmet Çelik",
-      "department": "Bilgi İşlem",
-      "salary": "4200",
+      "salary": "5000",
+      "department": "Bilgi İşlem 3",
       "id": "W_qolo5"
     }
   ]
